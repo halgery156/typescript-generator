@@ -1,0 +1,70 @@
+-------------------------------------------------------------------------------
+Test set: cz.habarta.typescript.generator.TaggedUnionsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.535 s <<< FAILURE! -- in cz.habarta.typescript.generator.TaggedUnionsTest
+cz.habarta.typescript.generator.TaggedUnionsTest.testTaggedUnionsWithInterfaces -- Time elapsed: 0.493 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+expected: <
+interface IShape2 {
+    kind: "circle" | "square" | "rectangle";
+}
+
+interface CSquare2 extends IQuadrilateral2 {
+    kind: "square";
+    size: number;
+}
+
+interface CRectangle2 extends IQuadrilateral2 {
+    kind: "rectangle";
+    width: number;
+    height: number;
+}
+
+interface CCircle2 extends IShape2 {
+    kind: "circle";
+    radius: number;
+}
+
+interface IQuadrilateral2 extends IShape2 {
+    kind: "square" | "rectangle";
+}
+
+type IShape2Union = CSquare2 | CRectangle2 | CCircle2;
+> but was: <
+interface CCircle2 extends IShape2 {
+    kind: "circle";
+    radius: number;
+}
+
+interface CRectangle2 extends IQuadrilateral2 {
+    height: number;
+    kind: "rectangle";
+    width: number;
+}
+
+interface CSquare2 extends IQuadrilateral2 {
+    kind: "square";
+    size: number;
+}
+
+interface IQuadrilateral2 extends IShape2 {
+    kind: "square" | "rectangle";
+}
+
+interface IShape2 {
+    kind: "circle" | "square" | "rectangle";
+}
+
+type IShape2Union = CSquare2 | CRectangle2 | CCircle2;
+>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at cz.habarta.typescript.generator.TaggedUnionsTest.testTaggedUnionsWithInterfaces(TaggedUnionsTest.java:257)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+

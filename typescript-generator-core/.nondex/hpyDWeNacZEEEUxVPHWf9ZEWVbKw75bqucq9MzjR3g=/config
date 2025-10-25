@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=C:\Users\victo\typescript-generator\typescript-generator\typescript-generator-core\.nondex
+nondexJarDir=C:\Users\victo\typescript-generator\typescript-generator\typescript-generator-core\.nondex
+nondexExecid=hpyDWeNacZEEEUxVPHWf9ZEWVbKw75bqucq9MzjR3g=
+nondexLogging=CONFIG
+test=
